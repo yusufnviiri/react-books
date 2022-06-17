@@ -2,7 +2,7 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
-export default function Bookitem(props) {
+export default function BookItem(props) {
   const { title, author, type } = props.bookprop;
   return (
     <div>

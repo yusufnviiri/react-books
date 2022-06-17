@@ -1,11 +1,11 @@
 import Home from './components/Home';
-import Bookcontainer from './components/Bookcontainer';
+import BookContainer from './components/BookContainer';
 
 function App() {
   return (
     <div className="App">
       <Home />
-      <Bookcontainer />
+      <BookContainer />
     </div>
   );
 }

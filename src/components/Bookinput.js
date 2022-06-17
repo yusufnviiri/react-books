@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 
-function Bookinput() {
+function BookInput() {
   const Action = [{
     value: 'Action',
     label: 'Action',
@@ -30,4 +30,4 @@ function Bookinput() {
   );
 }
 
-export default Bookinput;
+export default BookInput;

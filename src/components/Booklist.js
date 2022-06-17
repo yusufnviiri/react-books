@@ -1,7 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import Bookitem from './Bookitem';
+import BookItem from './BookItem';
 
 function Booklist(props) {
   return (
@@ -9,9 +9,9 @@ function Booklist(props) {
 
       <ul>
         {
-props.bookItem.map((book) => (
+props.BookItem.map((book) => (
 
-  <Bookitem
+  <BookItem
     bookprop={book}
     key={book.id}
   />

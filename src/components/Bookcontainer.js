@@ -3,11 +3,11 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Booklist from './Booklist';
-import Bookinput from './Bookinput';
+import BookList from './BookList';
+import BookInput from './BookInput';
 import Category from './Category';
 
-function Bookcontainer() {
+function BookContainer() {
   const book = [{
     id: 1,
     type: 'Action',
@@ -24,9 +24,9 @@ function Bookcontainer() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Bookinput />} />
+        <Route path="/" element={<BookInput />} />
 
-        <Route path="/allbooks" element={<Booklist bookItem={book} />} />
+        <Route path="/allbooks" element={<BookList BookItem={book} />} />
         <Route path="/category" element={<Category />} />
 
       </Routes>
@@ -34,4 +34,4 @@ function Bookcontainer() {
   );
 }
 
-export default Bookcontainer;
+export default BookContainer;

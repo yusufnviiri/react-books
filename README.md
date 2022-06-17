@@ -1,5 +1,5 @@
 # react-books
-React books a website for that is used to store and update activities for a user done on Books
+React books a website for that is used to store and update activities for a user done on  Books online
 ## Built With
 - Reactjs
 - CSS
