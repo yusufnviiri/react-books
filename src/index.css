@@ -14,8 +14,13 @@ body {
 
 .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  width: 50%;
+}
+
+.form input {
+  height: 25px;
 }
 
 form h1 {

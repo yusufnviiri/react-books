@@ -3,30 +3,20 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import BookList from './BookList';
 import BookInput from './BookInput';
 import Category from './Category';
 
 function BookContainer() {
-  const book = [{
-    id: 1,
-    type: 'Action',
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-  },
-  {
-    id: 2,
-    type: 'Economy',
-    title: 'Pan African',
-    author: 'Nelson Mandela',
-  }];
+  const books = useSelector((state) => state.books);
 
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<BookInput />} />
 
-        <Route path="/allbooks" element={<BookList BookItem={book} />} />
+        <Route path="/allbooks" element={<BookList BookItem={books} />} />
         <Route path="/category" element={<Category />} />
 
       </Routes>
