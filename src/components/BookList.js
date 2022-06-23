@@ -1,21 +1,22 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 
 import React from 'react';
 import BookItem from './BookItem';
 
 function Booklist(props) {
+  const { bookItem } = props;
+
   return (
     <>
 
       <ul>
         {
-props.BookItem.map((book) => (
+bookItem.map((book) => (
 
   <BookItem
     bookprop={book}
     key={book.id}
-    addCategory={props.category}
+
   />
 
 ))
@@ -26,5 +27,14 @@ props.BookItem.map((book) => (
     </>
   );
 }
+Booklist.propTypes = {
+  bookItem: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+  })).isRequired,
+
+};
 
 export default Booklist;

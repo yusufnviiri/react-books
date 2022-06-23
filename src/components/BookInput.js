@@ -7,7 +7,6 @@ function BookInput() {
   const [author, setAuthor] = useState('');
   const [type, setType] = useState('');
 
-  // console.log(books);
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();

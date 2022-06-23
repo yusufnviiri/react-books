@@ -4,7 +4,7 @@ import { ACTIONS } from '../redux/categories/categories';
 
 function Category() {
   const category = useSelector((state) => state.categories);
-  console.log(category);
+
   const dispatch = useDispatch();
 
   return (

@@ -16,7 +16,7 @@ function BookContainer() {
       <Routes>
         <Route path="/" element={<BookInput />} />
 
-        <Route path="/allbooks" element={<BookList BookItem={books} />} />
+        <Route path="/allbooks" element={<BookList bookItem={books} />} />
         <Route path="/category" element={<Category />} />
 
       </Routes>

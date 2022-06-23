@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { v4 as uuidv4 } from 'uuid';
 
 export const addBook = (type, title, author) => ({
@@ -9,3 +8,4 @@ export const addBook = (type, title, author) => ({
   author,
   compeleted: false,
 });
+export default addBook;

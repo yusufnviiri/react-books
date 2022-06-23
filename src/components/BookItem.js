@@ -1,18 +1,17 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { ACTIONS } from '../redux/books/books';
 
 export default function BookItem(props) {
   const dispatch = useDispatch();
+  const { bookprop } = props;
   const {
     type, title, author, id,
-  } = props.bookprop;
+  } = bookprop;
 
   return (
     <div>
-      {console.log(props.addCategory)}
       <li className="bookDetails">
 
         <p className="bookType">{type}</p>
@@ -35,3 +34,11 @@ export default function BookItem(props) {
     </div>
   );
 }
+BookItem.propTypes = {
+  bookprop: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+  }).isRequired,
+};
