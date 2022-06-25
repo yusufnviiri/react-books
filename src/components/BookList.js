@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import BookItem from './BookItem';
+import BookInput from './BookInput';
 
 import { getBooks } from '../redux/books/books';
 
@@ -30,7 +31,7 @@ function Booklist(props) {
         )) : 'Please wait...'}
 
       </ul>
-
+      <BookInput />
     </>
   );
 }

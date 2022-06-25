@@ -28,7 +28,6 @@ function BookInput() {
   [dispatch]);
 
   const options = [
-
     { value: 'Fiction', label: 'Fiction' },
     { value: 'Action', label: 'Action' },
     { value: 'Drama', label: 'Drama' },
@@ -48,12 +47,14 @@ function BookInput() {
             name="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="add title"
+            placeholder="Book title"
+            className="titleInput"
           />
-          <span>by</span>
+
           <input
             type="text"
             name="author"
+            className="authorInput"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
             placeholder="add auther"
@@ -63,13 +64,13 @@ function BookInput() {
             options={options}
             className="selects"
             onChange={(e) => setCategory(e.value)}
-            placeholder="Select category"
+            placeholder="category"
           />
 
-          <button type="submit">ADD BOOK</button>
-
+          <div className="submitButton">
+            <button type="submit">ADD BOOK</button>
+          </div>
         </div>
-
       </form>
 
     </div>
