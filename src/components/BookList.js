@@ -37,7 +37,7 @@ function Booklist(props) {
 }
 Booklist.propTypes = {
   bookItem: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
 

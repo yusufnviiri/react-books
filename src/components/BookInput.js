@@ -18,7 +18,7 @@ function BookInput() {
     dispatch(addBooks(book));
     setTitle('');
     setAuthor('');
-    setCategory('');
+    setCategory(' ');
     window.location.reload();
   };
   const books = useSelector((state) => state.books);
@@ -29,10 +29,9 @@ function BookInput() {
 
   const options = [
     { value: 'Fiction', label: 'Fiction' },
-    { value: 'Action', label: 'Action' },
     { value: 'Drama', label: 'Drama' },
     { value: 'Romance', label: 'Romance' },
-    { value: 'Biography', label: 'Biography' },
+    { value: 'Economy', label: 'Economy' },
   ];
 
   return (
