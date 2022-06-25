@@ -25,7 +25,7 @@ function BookInput() {
   useEffect(() => {
     dispatch(getBooks());
   },
-  [dispatch]);
+  []);
 
   const options = [
     { value: 'Fiction', label: 'Fiction' },
