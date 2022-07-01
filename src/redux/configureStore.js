@@ -4,6 +4,7 @@ import { combineReducers } from 'redux';
 import { configureStore,applyMiddleware } from '@reduxjs/toolkit';
 import categoriesReducer from './categories/categories';
 import { booksReducer } from './books/books';
+
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 const rootReducer = combineReducers({
@@ -13,7 +14,7 @@ const rootReducer = combineReducers({
 const store = configureStore({
   reducer: rootReducer,
   middleware: [applyMiddleware(thunk)],
-    middleware: [thunk, logger],
+  middleware: [thunk],
 
 });
 export const useStore = () => store;
