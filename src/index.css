@@ -1,31 +1,78 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
 }
 
 .App {
-  background-color: #ece5e5;
-  height: 87.5vh;
+  height: 100%;
+  background-color: #fafafa;
 }
 
-.select {
-  display: none;
+.selects {
+  height: 200%;
+  width: 20%;
+}
+
+.authorInput {
+  display: block;
 }
 
 .form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 90px;
+}
+
+.submitButton button {
+  height: 40%;
+  color: white;
+  background-color: #0290ff;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.submitButton {
+  width: 18%;
+  margin-left: 10px;
+}
+
+.form input {
+  height: 40%;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 5px;
+  align-self: stretch;
+  margin-right: 10px;
+  width: 30%;
 }
 
 form h1 {
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   color: #888;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
 }
 
 form {
-  width: 88%;
+  width: 98%;
   margin: auto;
+  border-top: 1px solid #e8e8e8;
 }
 
 ul {
@@ -42,10 +89,12 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: white;
   padding: 10px;
   border-radius: 5px;
-  margin: 10px 20px 20px 20px;
+  border-bottom: 2px solid #e8e8e8;
+  margin: 10px 0 40px 0;
+  height: 70px;
 }
 
 .navBar ul {
@@ -60,18 +109,56 @@ li {
   margin: 0 20px;
 }
 
-.navBar ul li :first-child {
-  color: steelblue;
+.navBar ul li a {
   text-decoration: none;
-  font-size: 25px;
 }
 
 .category {
   color: goldenrod;
-  font-family: "Roboto", sans-serif;
   padding: 10px;
   border-radius: 7px;
-  background-color: rgb(75, 35, 116);
+}
+
+#CATEGORIES {
+  color: #121212;
+  text-decoration: none;
+  font-size: 0.813rem;
+}
+
+#item1 a {
+  color: #0290ff;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+#item2 a {
+  color: #121212;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+#item3 a {
+  color: #121212;
+  opacity: 0.5;
+  text-decoration: none;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  font-size: 0.813rem;
+}
+
+#item4 a {
+  color: #0290ff;
+  height: 100px;
+  width: 1000px;
 }
 
 .category:hover {
@@ -79,7 +166,7 @@ li {
   color: white;
 }
 
-.categoryContainer {
+.CategoryContainer {
   width: 20%;
   margin: auto;
 }
@@ -89,4 +176,122 @@ li {
   padding: 10px;
   border-radius: 5px;
   margin: 10px 20px 20px 20px;
+}
+
+.bookItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 88%;
+  margin: auto;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  padding: 10px 40px 10px 20px;
+  margin-bottom: 30px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  margin: auto;
+  position: relative;
+}
+
+.circleValue {
+  font-size: 30px;
+  color: rgb(20, 11, 11);
+}
+
+.circleCompleted {
+  font-size: 15px;
+  color: rgb(142, 142, 142);
+}
+
+.circleSpan {
+  position: relative;
+  top: -100%;
+  left: 120%;
+  border-right: 2px solid #e8e8e8;
+  padding-right: 100px;
+}
+
+.chapter {
+  margin-left: 6%;
+}
+
+.currentChapter {
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  font-size: 16px;
+  font-weight: 100;
+  opacity: 0.5;
+}
+
+.chapterValue {
+  color: rgb(12, 10, 10);
+  font-size: 19px;
+  opacity: 0.9;
+}
+
+.chapter button {
+  color: rgb(247, 244, 240);
+  background-color: #3c89cc;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.comments,
+.edit,
+.remove {
+  border: none;
+  color: #3c89cc;
+  background-color: white;
+  padding-right: 15px;
+}
+
+#remove {
+  border-right: 2px solid #e8e8e8;
+  border-left: 2px solid #e8e8e8;
+  padding-left: 15px;
+}
+
+#edit {
+  padding-left: 10px;
+}
+
+.bookAuthor {
+  font-size: 15px;
+  color: #3c89cc;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.bookType {
+  font-size: 15px;
+  color: #888;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+}
+
+.bookButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: auto;
 }
