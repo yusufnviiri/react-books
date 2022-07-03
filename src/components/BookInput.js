@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Select from 'react-select';
@@ -19,11 +20,17 @@ function BookInput() {
     setTitle('');
     setAuthor('');
     setCategory(' ');
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }
+    , 1000);
+  
+   
   };
   const books = useSelector((state) => state.books);
   useEffect(() => {
     dispatch(getBooks());
+    console.log(books);
   },
   [dispatch]);
 

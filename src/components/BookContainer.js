@@ -15,7 +15,7 @@ function BookContainer() {
   useEffect(() => {
     dispatch(getBooks());
   },
-  [dispatch]);
+  [BookInput]);
 
   return (
 
